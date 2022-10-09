@@ -1,38 +1,158 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Roboto+Serif:opsz,wght@8..144,300;8..144,400;8..144,500;8..144,700&display=swap');
+
+body{
+  overflow-x: hidden;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.banner{
+  background: url(./img/banner.png);
+  height: 100vh;
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
+  justify-content: center;
+  flex-direction: column;
+  font-family: 'Caveat';
 }
 
-.App-link {
-  color: #61dafb;
+.banner p{
+  font-size: 2em;
+  animation: fade 3s linear;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.banner h1{
+  font-size: 9em;
+  animation: fade 3s linear;
+}
+
+
+
+.profile{
+  background-color: #341E0E;
+  height: 100vh;
+}
+
+
+
+.profile h2{
+  font-family: 'Caveat';
+  text-align: center;
+  font-size: 5em;
+  font-weight: 100;
+  color: white;
+  position: absolute;
+  left: 11em;
+  top: 110%;
+  animation: left-fade 2s linear;
+}
+
+
+
+.content-1{
+  display: flex;
+}
+
+.content-1 .left{
+  padding: 50px;
+  font-family: 'Roboto Serif';
+  font-size: 2em;
+  width: 30em;
+  text-align: center;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 2.5em;  
+  font-weight: 100;
+}
+
+.content-1 .right{
+  background-image: url(./img/profile-1.png);
+  background-size: cover;
+  width: 50vw;
+  height: 100vh;
+}
+
+.content-2{
+  background-color: #341E0E;
+  height: 100vh;
+  display: flex;
+}
+
+.content-2 .left{
+  background: url(./img/profile-3.png);
+  background-size: cover;
+  width: 63vw;
+  height: 100vh;
+}
+
+.content-2 .right{
+  padding: 50px;
+  font-family: 'Roboto Serif';
+  font-size: 2em;
+  width: 30em;
+  text-align: center;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 2.5em;  
+  font-weight: 100;
+}
+
+.content-3{
+  display: flex;
+  background-color: #341E0E;
+}
+
+.content-3 .left{
+  padding: 50px;
+  font-family: 'Roboto Serif';
+  font-size: 2em;
+  width: 30em;
+  text-align: center;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 2.5em;  
+  font-weight: 100;
+}
+
+.content-3 .right{
+  background-image: url(./img/profile-4.png);
+  background-size: cover;
+  width: 50vw;
+  height: 100vh;
+}
+
+
+
+@keyframes fade {
+  0%{
+    opacity: 0;
+    margin-top: 30px;
   }
-  to {
-    transform: rotate(360deg);
+  50%{
+    opacity: 1;
+    margin: 0;
+  }
+}
+
+@keyframes left-fade {
+  0%{
+    opacity: 0;
+    margin-right: 50px;
+  }
+
+  50%{
+    opacity: 1;
+    margin: 0;
   }
 }
