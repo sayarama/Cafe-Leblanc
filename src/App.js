@@ -1,21 +1,53 @@
-import logo from './logo.svg';
 import './App.css';
 import persona from './audio/persona.mp3';
 import Aos from 'aos';
 import "aos/dist/aos.css";
-import { useEffect } from 'react';
+import music from './img/music.png'
+import { useEffect, useState } from 'react';
+import {Howl, Howler} from 'howler'
+
+const sound = new Howl({
+  src: [persona],
+  loop:true,
+  volume:0.3,
+});
 
 function App() {
+
+  
+
+  const [isplay, setPlay] = useState(true);
+
+  console.log(isplay);
+  const play = () => {
+    if (isplay) {
+      sound.play();
+      setPlay(false);
+    } else {
+      sound.stop();
+      setPlay(true);
+
+      console.log('jalan');
+    }
+  }
+
+  
+
+  // sound.play();
+
+
+
   useEffect(() => {
     Aos.init({duration: 1500});
   }, []);
+
   return (
     <div className="App">
-      <audio autoPlay loop>
-        <source src={persona} type="audio/mpeg"/>
-      </audio>
-
+      <div className='msc'>
+      <img src= {music} onClick={play} className='music'/>
+      </div>
       <div className='banner'>
+      
         <p>coffee & curry</p>
         <h1>Café Leblanc</h1>
       </div>
@@ -44,7 +76,7 @@ function App() {
         <div className='content-3'>
           <div className='content-3 left'>
           <p data-aos="fade-right">"As long as I'm here, the world leaves me be. No annoyances or troublesome people to deal with. It's like my own personal hideaway."
-—Sojiro Sakura, Persona 5</p>
+          —Sojiro Sakura, Persona 5</p>
           </div>
 
           <div className='content-3 right'>

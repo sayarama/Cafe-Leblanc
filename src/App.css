@@ -9,10 +9,21 @@ body{
   padding: 0;
 }
 
+.msc{
+  position: fixed;
+}
+
+.music{
+  position: absolute;
+  padding: 20px 30px;
+  margin: 15px;
+  width: 90px;
+  cursor: pointer;
+}
+
 .banner{
   background: url(./img/banner.png);
   height: 100vh;
-  text-align: center;
   display: flex;
   align-items: center;
   color: white;
@@ -20,6 +31,7 @@ body{
   flex-direction: column;
   font-family: 'Caveat';
 }
+
 
 .banner p{
   font-size: 2em;
